@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-1a-dGm">
+                                <rect key="frame" x="20" y="59" width="374" height="32"/>
+                                <segments>
+                                    <segment title="현재위치"/>
+                                    <segment title="폴리텍대학"/>
+                                    <segment title="이지스퍼블리싱"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sgChangeLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="iQL-Sy-dH6"/>
+                                </connections>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Eo-kC-tZA">
+                                <rect key="frame" x="20" y="95" width="374" height="520"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEU-EB-Yt3">
+                                <rect key="frame" x="25" y="645" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chH-Yk-qAe">
+                                <rect key="frame" x="25" y="699" width="364" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x8g-1a-dGm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="1E5-mA-nJ4"/>
+                            <constraint firstItem="qEU-EB-Yt3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="7uy-NP-WVD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Eo-kC-tZA" secondAttribute="trailing" constant="20" id="A7Y-9O-EV5"/>
+                            <constraint firstItem="chH-Yk-qAe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Ar9-qi-rZI"/>
+                            <constraint firstItem="9Eo-kC-tZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BnZ-OK-Mrd"/>
+                            <constraint firstItem="chH-Yk-qAe" firstAttribute="top" secondItem="qEU-EB-Yt3" secondAttribute="bottom" constant="33" id="UZA-K9-bwR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x8g-1a-dGm" secondAttribute="trailing" constant="20" id="WPL-bA-ed8"/>
+                            <constraint firstItem="qEU-EB-Yt3" firstAttribute="top" secondItem="9Eo-kC-tZA" secondAttribute="bottom" constant="30" id="cDH-Rf-U4o"/>
+                            <constraint firstItem="9Eo-kC-tZA" firstAttribute="top" secondItem="x8g-1a-dGm" secondAttribute="bottom" constant="5" id="cmC-vS-yCI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="chH-Yk-qAe" secondAttribute="trailing" constant="25" id="oK9-7H-JHr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qEU-EB-Yt3" secondAttribute="trailing" constant="25" id="qSE-Uj-TSa"/>
+                            <constraint firstItem="x8g-1a-dGm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rQN-wc-NaE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="chH-Yk-qAe" secondAttribute="bottom" constant="142" id="t5e-tY-cg4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblLocationInfo1" destination="qEU-EB-Yt3" id="yrs-6E-knZ"/>
+                        <outlet property="lblLocationInfo2" destination="chH-Yk-qAe" id="AeF-LS-toB"/>
+                        <outlet property="myMap" destination="9Eo-kC-tZA" id="gqP-ki-fm4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
